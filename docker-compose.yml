@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  orthanc:
+    image: jodogne/orthanc-plugins
+    container_name: orthanc
+    ports:
+      - "8042:8042"
+      - "4242:4242"
+    volumes:
+      - ./orthanc/orthanc.json:/etc/orthanc/orthanc.json
+      - ./data/logs/orthanc:/var/log/orthanc
+    restart: unless-stopped
+
+  suricata:
+    image: jasonish/suricata:latest
+    container_name: suricata
+    network_mode: "host"
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    volumes:
+      - ./suricata/suricata.yaml:/etc/suricata/suricata.yaml
+      - ./data/logs/suricata:/var/log/suricata
+    restart: unless-stopped
+
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:7.17.12
+    container_name: filebeat
+    user: root
+    volumes:
+      - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml
+      - ./data/logs:/hostlogs:ro
+    command: ["--strict.perms=false"]
+    restart: unless-stopped
