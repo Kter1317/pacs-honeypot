@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
     libsqlite3-0 \
     libboost-all-dev \
     libjsoncpp-dev \
+    libjpeg62-turbo \
     && rm -rf /var/lib/apt/lists/*
 
 # 複製主程式
