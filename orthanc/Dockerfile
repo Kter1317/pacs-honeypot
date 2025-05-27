@@ -4,6 +4,7 @@ FROM debian:bookworm
 RUN apt-get update && apt-get install -y \
     libcurl4 \
     libsqlite3-0 \
+    libdcmtk14 \
     libboost-all-dev \
     libjsoncpp-dev \
     liblua5.3-0 \
