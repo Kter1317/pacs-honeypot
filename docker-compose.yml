@@ -73,6 +73,6 @@ services:
       - graylog_data:/usr/share/graylog/data
     restart: unless-stopped
 
-  volumes:
-    esdata:
-    graylog_data:
+volumes:
+  esdata:
+  graylog_data:
