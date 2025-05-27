@@ -1,6 +1,6 @@
 version: "3.8"
 
-Services:
+services:
   orthanc:
     build:
       context: ./orthanc
