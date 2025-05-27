@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   orthanc:
-    image: jodogne/orthanc:latest
+    image: jodogne/orthanc-plugins:latest
     container_name: orthanc
     ports:
       - "8042:8042"
