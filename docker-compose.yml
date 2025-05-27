@@ -56,6 +56,11 @@ services:
     image: mongo:4.2
     container_name: mongodb
     restart: unless-stopped
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongo mongodb:27017/test --quiet
+      interval: 30s
+      timeout: 10s
+      retries: 5
 
   graylog:
     image: graylog/graylog:4.2
