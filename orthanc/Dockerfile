@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y \
     libjsoncpp-dev \
     liblua5.3-0 \
     libjpeg62-turbo \
+    libssl-dev \
+    openssl \
     && ln -s /lib/x86_64-linux-gnu/libjpeg.so.62 /lib/x86_64-linux-gnu/libjpeg.so.8 \
     && rm -rf /var/lib/apt/lists/*
 

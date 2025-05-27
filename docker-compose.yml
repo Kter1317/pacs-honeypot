@@ -46,6 +46,11 @@ services:
     volumes:
       - esdata:/usr/share/elasticsearch/data
     restart: unless-stopped
+    healthcheck:
+      test: curl -f http://localhost:9200 || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 5
 
   mongodb:
     image: mongo:4.2
