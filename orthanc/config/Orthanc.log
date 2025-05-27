@@ -1,0 +1,216 @@
+W0527 01:45:58.311717 main.cpp:1974] Orthanc version: 1.10.0
+I0527 01:45:58.311818 main.cpp:2006] Architecture: 64-bit, little endian
+W0527 01:45:58.311869 OrthancConfiguration.cpp:106] Scanning folder "/etc/orthanc/" for configuration files
+W0527 01:45:58.311957 OrthancConfiguration.cpp:55] Reading the configuration from: "/etc/orthanc/worklists.json"
+W0527 01:45:58.312137 OrthancConfiguration.cpp:55] Reading the configuration from: "/etc/orthanc/python.json"
+W0527 01:45:58.312215 OrthancConfiguration.cpp:55] Reading the configuration from: "/etc/orthanc/postgresql.json"
+W0527 01:45:58.312350 OrthancConfiguration.cpp:55] Reading the configuration from: "/etc/orthanc/orthanc.json"
+W0527 01:45:58.312988 OrthancConfiguration.cpp:55] Reading the configuration from: "/etc/orthanc/dicomweb.json"
+W0527 01:45:58.313083 OrthancConfiguration.cpp:55] Reading the configuration from: "/etc/orthanc/webviewer.json"
+W0527 01:45:58.313161 OrthancConfiguration.cpp:55] Reading the configuration from: "/etc/orthanc/serve-folders.json"
+W0527 01:45:58.313243 OrthancConfiguration.cpp:55] Reading the configuration from: "/etc/orthanc/credentials.json"
+W0527 01:45:58.313318 OrthancConfiguration.cpp:55] Reading the configuration from: "/etc/orthanc/mysql.json"
+W0527 01:45:58.313400 OrthancConfiguration.cpp:55] Reading the configuration from: "/etc/orthanc/gdcm.json"
+I0527 01:45:58.313483 Toolbox.cpp:1473] Using locale: "en_US.UTF-8" for case-insensitive comparison of strings
+I0527 01:45:58.313576 Toolbox.cpp:1765] OpenSSL version: OpenSSL 3.0.1 14 Dec 2021
+I0527 01:45:58.314098 FromDcmtkBridge.cpp:292] (dicom) Using DCTMK version: 366
+I0527 01:45:58.323381 FromDcmtkBridge.cpp:375] (dicom) Clearing the DICOM dictionary
+W0527 01:45:58.323674 FromDcmtkBridge.cpp:380] Loading external DICOM dictionary: "/usr/share/libdcmtk16/dicom.dic"
+W0527 01:45:58.328578 FromDcmtkBridge.cpp:380] Loading external DICOM dictionary: "/usr/share/libdcmtk16/private.dic"
+I0527 01:45:58.331721 FromDcmtkBridge.cpp:2315] (dicom) Registering JPEG Lossless codecs in DCMTK
+I0527 01:45:58.331743 FromDcmtkBridge.cpp:2323] (dicom) Registering JPEG codecs in DCMTK
+I0527 01:45:58.331765 FromDcmtkBridge.cpp:2330] (dicom) Registering RLE codecs in DCMTK
+I0527 01:45:58.331785 Enumerations.cpp:2329] Default encoding for DICOM was changed to: Latin1
+I0527 01:45:58.337137 OrthancInitialization.cpp:311] Calling mallopt(M_ARENA_MAX, 5)
+W0527 01:45:58.337947 main.cpp:885] Loading plugin(s) from: /usr/share/orthanc/plugins/
+I0527 01:45:58.337974 PluginsManager.cpp:277] (plugins) Scanning folder /usr/share/orthanc/plugins/ for plugins
+I0527 01:45:58.338009 PluginsManager.cpp:300] (plugins) Found a shared library: "/usr/share/orthanc/plugins/libModalityWorklists.so"
+W0527 01:45:58.338260 PluginsManager.cpp:258] Registering plugin 'worklists' (version 1.10.0)
+W0527 01:45:58.338276 PluginsManager.cpp:157] Sample worklist plugin is initializing
+W0527 01:45:58.338477 PluginsManager.cpp:157] Worklist server is disabled by the configuration file
+I0527 01:45:58.338528 PluginsManager.cpp:300] (plugins) Found a shared library: "/usr/share/orthanc/plugins/libOrthancWebViewer.so"
+W0527 01:45:58.338911 PluginsManager.cpp:258] Registering plugin 'web-viewer' (version 2.8)
+W0527 01:45:58.338933 PluginsManager.cpp:157] Initializing the Web viewer
+W0527 01:45:58.339085 PluginsManager.cpp:157] Web viewer using 4 threads for the decoding of the DICOM images
+W0527 01:45:58.339094 PluginsManager.cpp:157] Storing the cache of the Web viewer in folder: /tmp/OrthancWebViewerCache
+W0527 01:45:58.339722 PluginsManager.cpp:157] Web viewer using a cache of 100 MB
+I0527 01:45:58.339744 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /web-viewer/series/(.*)
+I0527 01:45:58.339769 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /web-viewer/is-stable-series/(.*)
+I0527 01:45:58.339782 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /web-viewer/instances/(.*)
+I0527 01:45:58.339795 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /web-viewer/libs/(.*)
+I0527 01:45:58.339812 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /web-viewer/app/(.*)
+I0527 01:45:58.339824 OrthancPlugins.cpp:2406] (plugins) Plugin has registered an OnChange callback
+I0527 01:45:58.339841 PluginsManager.cpp:300] (plugins) Found a shared library: "/usr/share/orthanc/plugins/libOrthancWSI.so"
+W0527 01:45:58.340380 PluginsManager.cpp:258] Registering plugin 'wsi' (version 1.1)
+W0527 01:45:58.340419 PluginsManager.cpp:157] The whole-slide imaging plugin will use at most 8 threads to transcode the tiles
+I0527 01:45:58.340427 OrthancPlugins.cpp:2406] (plugins) Plugin has registered an OnChange callback
+I0527 01:45:58.340435 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /wsi/app/(ol.css)
+I0527 01:45:58.340450 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /wsi/app/(ol.js)
+I0527 01:45:58.340463 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /wsi/app/(viewer.html)
+I0527 01:45:58.340475 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /wsi/app/(viewer.js)
+I0527 01:45:58.340488 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /wsi/pyramids/([0-9a-f-]+)
+I0527 01:45:58.340502 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /wsi/tiles/([0-9a-f-]+)/([0-9-]+)/([0-9-]+)/([0-9-]+)
+I0527 01:45:58.340525 PluginsManager.cpp:300] (plugins) Found a shared library: "/usr/share/orthanc/plugins/libOrthancPostgreSQLStorage.so"
+W0527 01:45:58.341034 PluginsManager.cpp:258] Registering plugin 'postgresql-storage' (version 4.0)
+I0527 01:45:58.341059 PluginsManager.cpp:161] (plugins) OpenSSL version: OpenSSL 3.0.1 14 Dec 2021
+W0527 01:45:58.341243 PluginsManager.cpp:157] The PostgreSQL storage area is currently disabled, set "EnableStorage" to "true" in the "PostgreSQL" section of the configuration file of Orthanc
+I0527 01:45:58.341281 PluginsManager.cpp:300] (plugins) Found a shared library: "/usr/share/orthanc/plugins/libOrthancPython.so"
+W0527 01:45:58.342175 PluginsManager.cpp:258] Registering plugin 'python' (version 4.0)
+W0527 01:45:58.342194 PluginsManager.cpp:157] Python plugin is initializing
+W0527 01:45:58.342297 PluginsManager.cpp:157] The option "PythonScript" is not provided: Python scripting is disabled
+I0527 01:45:58.342315 PluginsManager.cpp:300] (plugins) Found a shared library: "/usr/share/orthanc/plugins/libOrthancMySQLIndex.so"
+W0527 01:45:58.343095 PluginsManager.cpp:258] Registering plugin 'mysql-index' (version 4.3)
+I0527 01:45:58.343120 PluginsManager.cpp:161] (plugins) OpenSSL version: OpenSSL 3.0.1 14 Dec 2021
+W0527 01:45:58.343307 PluginsManager.cpp:157] The MySQL index is currently disabled, set "EnableIndex" to "true" in the "MySQL" section of the configuration file of Orthanc
+I0527 01:45:58.343326 PluginsManager.cpp:300] (plugins) Found a shared library: "/usr/share/orthanc/plugins/libOrthancDicomWeb.so"
+W0527 01:45:58.343728 PluginsManager.cpp:258] Registering plugin 'dicom-web' (version 1.7)
+I0527 01:45:58.343939 PluginsManager.cpp:161] (plugins) The DICOMweb plugin reads the DICOMweb servers from the configuration file
+W0527 01:45:58.343957 PluginsManager.cpp:157] URI to the DICOMweb REST API: /dicom-web/
+I0527 01:45:58.343965 OrthancPlugins.cpp:2381] (plugins) Plugin has registered a REST callback for chunked streams on: /dicom-web/studies
+I0527 01:45:58.343978 OrthancPlugins.cpp:2381] (plugins) Plugin has registered a REST callback for chunked streams on: /dicom-web/studies/([^/]*)
+I0527 01:45:58.343995 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/instances
+I0527 01:45:58.344008 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/series
+I0527 01:45:58.344026 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/studies/([^/]*)/instances
+I0527 01:45:58.344040 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/studies/([^/]*)/metadata
+I0527 01:45:58.344053 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/studies/([^/]*)/series
+I0527 01:45:58.344067 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/studies/([^/]*)/series/([^/]*)
+I0527 01:45:58.344080 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/studies/([^/]*)/series/([^/]*)/instances
+I0527 01:45:58.344094 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/studies/([^/]*)/series/([^/]*)/instances/([^/]*)
+I0527 01:45:58.344109 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/studies/([^/]*)/series/([^/]*)/instances/([^/]*)/bulk/(.*)
+I0527 01:45:58.344124 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/studies/([^/]*)/series/([^/]*)/instances/([^/]*)/metadata
+I0527 01:45:58.344138 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/studies/([^/]*)/series/([^/]*)/metadata
+I0527 01:45:58.344152 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/studies/([^/]*)/series/([^/]*)/instances/([^/]*)/frames
+I0527 01:45:58.344167 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/studies/([^/]*)/series/([^/]*)/instances/([^/]*)/frames/([^/]*)
+I0527 01:45:58.344182 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/servers
+I0527 01:45:58.344195 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/servers/([^/]*)
+I0527 01:45:58.344209 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/servers/([^/]*)/stow
+I0527 01:45:58.344222 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/servers/([^/]*)/wado
+I0527 01:45:58.344236 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/servers/([^/]*)/get
+I0527 01:45:58.344249 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/servers/([^/]*)/retrieve
+I0527 01:45:58.344262 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/servers/([^/]*)/qido
+I0527 01:45:58.344276 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/servers/([^/]*)/delete
+I0527 01:45:58.344289 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/app/libs/(.*)
+I0527 01:45:58.344302 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/info
+I0527 01:45:58.344315 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/studies/([^/]*)/rendered
+I0527 01:45:58.344328 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/studies/([^/]*)/series/([^/]*)/rendered
+I0527 01:45:58.344342 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/studies/([^/]*)/series/([^/]*)/instances/([^/]*)/rendered
+I0527 01:45:58.344357 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/studies/([^/]*)/series/([^/]*)/instances/([^/]*)/frames/([^/]*)/rendered
+I0527 01:45:58.344374 OrthancPlugins.cpp:2406] (plugins) Plugin has registered an OnChange callback
+I0527 01:45:58.344383 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /dicom-web/app/client/(.*)
+W0527 01:45:58.344432 PluginsManager.cpp:157] URI to the WADO-URI API: /wado
+I0527 01:45:58.344440 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /wado
+I0527 01:45:58.344458 PluginsManager.cpp:300] (plugins) Found a shared library: "/usr/share/orthanc/plugins/libOrthancPostgreSQLIndex.so"
+W0527 01:45:58.344847 PluginsManager.cpp:258] Registering plugin 'postgresql-index' (version 4.0)
+I0527 01:45:58.344870 PluginsManager.cpp:161] (plugins) OpenSSL version: OpenSSL 3.0.1 14 Dec 2021
+W0527 01:45:58.345067 PluginsManager.cpp:157] The PostgreSQL index is currently disabled, set "EnableIndex" to "true" in the "PostgreSQL" section of the configuration file of Orthanc
+I0527 01:45:58.345085 PluginsManager.cpp:300] (plugins) Found a shared library: "/usr/share/orthanc/plugins/libServeFolders.so"
+W0527 01:45:58.345256 PluginsManager.cpp:258] Registering plugin 'serve-folders' (version 1.10.0)
+I0527 01:45:58.345275 OrthancPlugins.cpp:2364] (plugins) Plugin has registered a REST callback without mutual exclusion on: /app/plugin-serve-folders.html
+W0527 01:45:58.345452 PluginsManager.cpp:157] ServeFolders: Empty configuration file: No additional folder will be served!
+I0527 01:45:58.345465 PluginsManager.cpp:300] (plugins) Found a shared library: "/usr/share/orthanc/plugins/libOrthancMySQLStorage.so"
+W0527 01:45:58.345901 PluginsManager.cpp:258] Registering plugin 'mysql-storage' (version 4.3)
+I0527 01:45:58.345923 PluginsManager.cpp:161] (plugins) OpenSSL version: OpenSSL 3.0.1 14 Dec 2021
+W0527 01:45:58.346099 PluginsManager.cpp:157] The MySQL storage area is currently disabled, set "EnableStorage" to "true" in the "MySQL" section of the configuration file of Orthanc
+I0527 01:45:58.346116 PluginsManager.cpp:300] (plugins) Found a shared library: "/usr/share/orthanc/plugins/libOrthancGdcm.so"
+W0527 01:45:58.356400 PluginsManager.cpp:258] Registering plugin 'gdcm' (version 1.4)
+W0527 01:45:58.356639 PluginsManager.cpp:157] Throttling GDCM to 4 concurrent thread(s)
+W0527 01:45:58.356652 PluginsManager.cpp:157] Version of GDCM: 3.0.10
+I0527 01:45:58.356660 OrthancPlugins.cpp:2479] (plugins) Plugin has registered a callback to decode DICOM images (1 decoder(s) now active)
+I0527 01:45:58.356671 OrthancPlugins.cpp:2492] (plugins) Plugin has registered a callback to transcode DICOM images (1 transcoder(s) now active)
+W0527 01:45:58.356693 OrthancInitialization.cpp:347] SQLite index directory: "/var/lib/orthanc/db-v6"
+W0527 01:45:58.356814 OrthancInitialization.cpp:446] Storage directory: "/var/lib/orthanc/db-v6"
+I0527 01:45:58.357151 SQLiteDatabaseWrapper.cpp:1339] Version of the Orthanc database: 6
+W0527 01:45:58.357171 HttpClient.cpp:1177] HTTPS will use the CA certificates from this file: /etc/orthanc/
+I0527 01:45:58.357183 HttpClient.cpp:499] (http) Setting the default timeout for HTTP client connections: 60 seconds
+I0527 01:45:58.357194 HttpClient.cpp:483] (http) Setting the default proxy for HTTP client connections: 
+I0527 01:45:58.357201 DicomAssociationParameters.cpp:376] (dicom) Default timeout for DICOM connections if Orthanc acts as SCU (client): 10 seconds (0 = no timeout)
+I0527 01:45:58.357379 ServerIndex.cpp:289] Starting the database flushing thread (sleep = 10 seconds)
+I0527 01:45:58.357439 LuaJobManager.cpp:68] (lua) Lua: DICOM associations will be closed after 5 seconds of inactivity
+I0527 01:45:58.357455 LuaScripting.cpp:771] Initializing Lua for the event handler
+I0527 01:45:58.357493 ServerIndex.cpp:427] Starting the monitor for stable resources (stable age = 60)
+W0527 01:45:58.357542 LuaContext.cpp:94] Lua says: Lua toolbox installed
+I0527 01:45:58.357608 LuaJobManager.cpp:68] (lua) Lua: DICOM associations will be closed after 5 seconds of inactivity
+I0527 01:45:58.357619 LuaScripting.cpp:771] Initializing Lua for the event handler
+W0527 01:45:58.357681 LuaContext.cpp:94] Lua says: Lua toolbox installed
+I0527 01:45:58.357702 ServerContext.cpp:371] Automated transcoding of incoming DICOM instances is disabled
+I0527 01:45:58.357710 ServerContext.cpp:378] (dicom) Deidentification of log contents (notably for DIMSE queries) is enabled
+I0527 01:45:58.357718 ServerContext.cpp:382] (dicom) Version of DICOM standard used for deidentification is 2021b
+I0527 01:45:58.357800 ServerContext.cpp:401] (dicom) Preferred transfer syntax for Orthanc C-STORE SCU: 1.2.840.10008.1.2.1
+I0527 01:45:58.357885 DcmtkTranscoder.cpp:76] Quality for lossy transcoding using DCMTK is set to: 90
+W0527 01:45:58.357896 ServerContext.cpp:476] Disk compression is disabled
+I0527 01:45:58.357903 ServerContext.cpp:1221] Storing MD5 for attachments: yes
+W0527 01:45:58.357912 ServerIndex.cpp:380] No limit on the number of stored patients
+W0527 01:45:58.357919 ServerIndex.cpp:400] No limit on the size of the storage area
+W0527 01:45:58.358089 ServerContext.cpp:218] Reloading the jobs from the last execution of Orthanc
+I0527 01:45:58.358216 JobsEngine.cpp:126] (jobs) Worker thread 0 has started
+W0527 01:45:58.358224 JobsEngine.cpp:272] The jobs engine has started with 2 threads
+W0527 01:45:58.358289 main.cpp:299] Security risk in DICOM SCP: C-FIND requests for worklists are always allowed, even from unknown modalities
+I0527 01:45:58.358300 DicomServer.cpp:134] (dicom) Setting timeout for DICOM connections if Orthanc acts as SCP (server): 30 seconds (0 = no timeout)
+I0527 01:45:58.358402 JobsEngine.cpp:126] (jobs) Worker thread 1 has started
+I0527 01:45:58.358418 DicomServer.cpp:422] (dicom) Orthanc SCP will *not* use DICOM TLS
+I0527 01:45:58.358461 DicomServer.cpp:430] (dicom) The embedded DICOM server will use 4 threads
+W0527 01:45:58.358618 main.cpp:1271] DICOM server listening with AET ORTHANC on port: 4242
+I0527 01:45:58.358625 DicomServer.cpp:64] (dicom) DICOM server started
+I0527 01:45:58.358643 HttpServer.cpp:1585] (http) This Orthanc server uses CivetWeb as its embedded HTTP server
+I0527 01:45:58.358677 HttpServer.cpp:2074] (http) The embedded HTTP server will use 50 threads
+I0527 01:45:58.358688 HttpServer.cpp:1934] (http) HTTP keep alive is enabled
+W0527 01:45:58.358697 HttpServer.cpp:1998] HTTP compression is enabled
+I0527 01:45:58.358705 HttpServer.cpp:2087] (http) TCP_NODELAY for the HTTP sockets is set to true
+I0527 01:45:58.358714 HttpServer.cpp:2107] (http) Request timeout in the HTTP server is set to 30 seconds
+W0527 01:45:58.358723 main.cpp:1031] Remote access is allowed but "AuthenticationEnabled" is not in the configuration, automatically enabling HTTP authentication for security
+I0527 01:45:58.358746 main.cpp:1134] Version of Lua: Lua 5.3
+W0527 01:45:58.358757 main.cpp:1145] Remote LUA script execution is disabled
+I0527 01:45:58.358769 HttpServer.cpp:2154] (http) Branching WebDAV bucket at: /webdav
+I0527 01:45:58.358790 HttpServer.cpp:1630] (http) Starting embedded Web server using Civetweb
+I0527 01:45:58.360476 OrthancWebDav.cpp:1694] Starting the WebDAV upload thread
+W0527 01:45:58.360555 HttpServer.cpp:1775] HTTP server listening on port: 8042 (HTTPS encryption is disabled, remote access is allowed)
+W0527 01:45:58.360571 main.cpp:897] Orthanc has started
+I0527 01:45:58.360698 LuaScripting.cpp:830] Starting the Lua engine
+I0527 01:46:02.209762 HttpServer.cpp:1244] (http) GET /app/explorer.html
+I0527 01:46:02.237750 HttpServer.cpp:1244] (http) GET /app/libs/jquery.mobile.min.css
+I0527 01:46:02.238139 HttpServer.cpp:1244] (http) GET /app/libs/jqtree.css
+I0527 01:46:02.238708 HttpServer.cpp:1244] (http) GET /app/libs/jquery.mobile.simpledialog.min.css
+I0527 01:46:02.238746 HttpServer.cpp:1244] (http) GET /app/libs/jquery-file-upload/css/style.css
+I0527 01:46:02.238815 HttpServer.cpp:1244] (http) GET /app/libs/jquery-file-upload/css/jquery.fileupload-ui.css
+I0527 01:46:02.239225 HttpServer.cpp:1244] (http) GET /app/libs/slimbox2/slimbox2.css
+I0527 01:46:02.239400 HttpServer.cpp:1244] (http) GET /app/libs/jquery.min.js
+I0527 01:46:02.239685 HttpServer.cpp:1244] (http) GET /app/libs/jquery.mobile.min.js
+I0527 01:46:02.239913 HttpServer.cpp:1244] (http) GET /app/libs/jqm.page.params.js
+I0527 01:46:02.240398 HttpServer.cpp:1244] (http) GET /app/libs/tree.jquery.js
+I0527 01:46:02.240464 HttpServer.cpp:1244] (http) GET /app/libs/date.js
+I0527 01:46:02.241170 HttpServer.cpp:1244] (http) GET /app/libs/jquery.mobile.simpledialog2.js
+I0527 01:46:02.241483 HttpServer.cpp:1244] (http) GET /app/libs/jquery.blockui.js
+I0527 01:46:02.241800 HttpServer.cpp:1244] (http) GET /app/libs/slimbox2.js
+I0527 01:46:02.241898 HttpServer.cpp:1244] (http) GET /app/libs/jquery-file-upload/js/jquery.iframe-transport.js
+I0527 01:46:02.242137 HttpServer.cpp:1244] (http) GET /app/libs/jquery-file-upload/js/jquery.fileupload.js
+I0527 01:46:02.242176 HttpServer.cpp:1244] (http) GET /app/libs/jquery-file-upload/js/vendor/jquery.ui.widget.js
+I0527 01:46:02.242546 HttpServer.cpp:1244] (http) GET /app/explorer.css
+I0527 01:46:02.242750 HttpServer.cpp:1244] (http) GET /app/file-upload.js
+I0527 01:46:02.242960 HttpServer.cpp:1244] (http) GET /app/explorer.js
+I0527 01:46:02.243318 HttpServer.cpp:1244] (http) GET /app/query-retrieve.js
+I0527 01:46:02.243683 HttpServer.cpp:1244] (http) GET /plugins/explorer.js
+I0527 01:46:02.281144 HttpServer.cpp:1244] (http) GET /app/orthanc-logo.png
+I0527 01:46:02.286850 HttpServer.cpp:1244] (http) GET /app/libs/images/ajax-loader.gif
+I0527 01:46:02.308818 HttpServer.cpp:1244] (http) GET /system
+I0527 01:46:02.314265 HttpServer.cpp:1244] (http) GET /instances/f6243344-db8927bb-e473639b-d510b561-aea4fd06
+I0527 01:46:02.318228 HttpServer.cpp:1244] (http) GET /series/98d367a5-58eeba8b-f3c2da4b-de7d8f6f-ede53eb2
+I0527 01:46:02.320185 HttpServer.cpp:1244] (http) GET /studies/3abaec0a-ebfaaa87-f830d52b-d62df074-6a692c12
+I0527 01:46:02.321869 HttpServer.cpp:1244] (http) GET /patients/b6589fc6-ab0dc82c-f12099d1-c2d40ab9-94e8410c
+I0527 01:46:02.326014 HttpServer.cpp:1244] (http) GET /instances/f6243344-db8927bb-e473639b-d510b561-aea4fd06/tags
+I0527 01:46:02.326150 FilesystemStorage.cpp:176] Reading attachment "2b3c44cb-faae-4d04-a64d-e3a6a7d92137" of "DICOM" content type (range from 0 to 2088)
+I0527 01:46:02.334772 HttpServer.cpp:1244] (http) GET /instances/f6243344-db8927bb-e473639b-d510b561-aea4fd06/header
+I0527 01:46:02.334974 StorageCache.cpp:125] Read start of attachment "2b3c44cb-faae-4d04-a64d-e3a6a7d92137" with content type 1 from cache
+I0527 01:46:02.337486 HttpServer.cpp:1244] (http) GET /instances/f6243344-db8927bb-e473639b-d510b561-aea4fd06/metadata
+I0527 01:46:02.339408 HttpServer.cpp:1244] (http) GET /instances/f6243344-db8927bb-e473639b-d510b561-aea4fd06/attachments
+I0527 01:46:02.343872 HttpServer.cpp:1244] (http) GET /app/libs/images/icons-18-white.png
+I0527 01:46:02.352562 HttpServer.cpp:1244] (http) GET /instances/f6243344-db8927bb-e473639b-d510b561-aea4fd06
+I0527 01:46:02.354666 HttpServer.cpp:1244] (http) GET /series/98d367a5-58eeba8b-f3c2da4b-de7d8f6f-ede53eb2
+I0527 01:46:02.356324 HttpServer.cpp:1244] (http) GET /studies/3abaec0a-ebfaaa87-f830d52b-d62df074-6a692c12
+I0527 01:46:02.357957 HttpServer.cpp:1244] (http) GET /patients/b6589fc6-ab0dc82c-f12099d1-c2d40ab9-94e8410c
+I0527 01:46:02.366361 HttpServer.cpp:1244] (http) GET /instances/f6243344-db8927bb-e473639b-d510b561-aea4fd06/tags
+I0527 01:46:02.366556 StorageCache.cpp:125] Read start of attachment "2b3c44cb-faae-4d04-a64d-e3a6a7d92137" with content type 1 from cache
+I0527 01:46:02.379456 HttpServer.cpp:1244] (http) GET /instances/f6243344-db8927bb-e473639b-d510b561-aea4fd06/header
+I0527 01:46:02.379731 StorageCache.cpp:125] Read start of attachment "2b3c44cb-faae-4d04-a64d-e3a6a7d92137" with content type 1 from cache
+I0527 01:46:02.384932 HttpServer.cpp:1244] (http) GET /instances/f6243344-db8927bb-e473639b-d510b561-aea4fd06/metadata
+I0527 01:46:02.387030 HttpServer.cpp:1244] (http) GET /instances/f6243344-db8927bb-e473639b-d510b561-aea4fd06/attachments
+I0527 01:46:02.389729 HttpServer.cpp:1244] (http) GET /app/libs/jqtree-icons.png

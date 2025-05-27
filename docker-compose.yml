@@ -1,14 +1,14 @@
 version: "3.8"
 
-services:
+Services:
   orthanc:
-    image: jodogne/orthanc-plugins
+    build:
+      context: ./orthanc
     container_name: orthanc
     ports:
       - "8042:8042"
       - "4242:4242"
     volumes:
-      - ./orthanc/orthanc.json:/etc/orthanc/orthanc.json
       - ./data/logs/orthanc:/var/log/orthanc
     restart: unless-stopped
 
@@ -20,7 +20,11 @@ services:
       - NET_ADMIN
       - NET_RAW
     volumes:
-      - ./suricata/suricata.yaml:/etc/suricata/suricata.yaml
+      - ./suricata/config/suricata.yaml:/etc/suricata/suricata.yaml
+      - ./suricata/config/classification.config:/etc/suricata/classification.config
+      - ./suricata/config/reference.config:/etc/suricata/reference.config
+      - ./suricata/config/threshold.config:/etc/suricata/threshold.config
+      - ./suricata/rules:/etc/suricata/rules
       - ./data/logs/suricata:/var/log/suricata
     restart: unless-stopped
 
@@ -30,6 +34,45 @@ services:
     user: root
     volumes:
       - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml
-      - ./data/logs:/hostlogs:ro
+      - ./data/logs/suricata:/var/log/suricata:ro
+      - ./data/logs/orthanc:/var/log/orthanc:ro
     command: ["--strict.perms=false"]
     restart: unless-stopped
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.10.2
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    restart: unless-stopped
+
+  mongodb:
+    image: mongo:4.2
+    container_name: mongodb
+    restart: unless-stopped
+
+  graylog:
+    image: graylog/graylog:4.2
+    container_name: graylog
+    environment:
+      - GRAYLOG_PASSWORD_SECRET=some-long-random-secret
+      - GRAYLOG_ROOT_PASSWORD_SHA2=8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918
+      - GRAYLOG_HTTP_EXTERNAL_URI=http://localhost:9000/
+    entrypoint: /usr/bin/tini -- wait-for-it elasticsearch:9200 -- /docker-entrypoint.sh
+    depends_on:
+      - mongodb
+      - elasticsearch
+    ports:
+      - "9000:9000"      # Graylog Web UI
+      - "5044:5044"      # Filebeat (Beats input)
+      - "12201:12201/udp" # GELF (UDP input)
+    volumes:
+      - graylog_data:/usr/share/graylog/data
+    restart: unless-stopped
+
+  volumes:
+    esdata:
+    graylog_data:
