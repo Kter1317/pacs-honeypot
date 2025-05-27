@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y \
     libcurl4 \
     libsqlite3-0 \
     libboost-all-dev \
-    libjsoncpp1 \
+    libjsoncpp-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # 複製主程式
