@@ -11,6 +11,7 @@ services:
       - ./orthanc/config:/etc/orthanc
       - ./orthanc/plugins:/usr/share/orthanc/plugins
       - ./orthanc/data:/var/lib/orthanc
+      - ./orthanc/logs:/var/log/orthanc
     restart: unless-stopped
   suricata:
     image: jasonish/suricata:latest

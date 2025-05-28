@@ -17,6 +17,11 @@
   // a RAM-drive or a SSD device for performance reasons.
   "IndexDirectory" : "/var/lib/orthanc/db-v6",
 
+  "LogDirectory" : "/var/log/orthanc",
+  "LogFile" : "orthanc.log",
+  "Verbose" : true,
+
+
   // Path to the directory where Orthanc stores its large temporary
   // files. The content of this folder can be safely deleted once
   // Orthanc is stopped. The folder must exist. The corresponding
